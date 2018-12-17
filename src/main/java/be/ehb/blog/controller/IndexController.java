@@ -32,6 +32,7 @@ public class IndexController {
         return "home";
     }
 
+    //changed post method
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.POST)
     public String save(@ModelAttribute("newPost") @Valid BlogPost newPost,
                        BindingResult bindingResult){
