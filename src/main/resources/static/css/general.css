@@ -40,3 +40,12 @@ nav{
 .even .head{
     text-align: right;
 }
+
+footer{
+    height: 2%;
+    text-align: center;
+    font-size: 8pt;
+    font-family: Verdana, sans-serif;
+    color: mediumvioletred;
+    background-color: orange;
+}
