@@ -49,4 +49,8 @@ public class IndexController {
         repo.deleteById(id);
         return "redirect:/index";
     }
+
+    public String toString2() {
+        return super.toString();
+    }
 }
