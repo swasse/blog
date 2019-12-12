@@ -54,11 +54,27 @@
                 <h3 th:text="${blog.dateCreated}"></h3>
             </div>
             <p th:text="${blog.content}"></p>
-            <a class="btn btn-danger" th:href="@{/delete/{id}(id = ${blog.id})}">Delete</a>
+            <a class="btn btn-danger" th:href="'#modal' + ${blog.id}" data-toggle="modal">Delete</a>
+
+            <div class="modal fade" th:id="'modal'+${blog.id}">
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p th:text="#{modal.confirmation}"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-dismiss="modal" th:text="#{label.cancel}">Cancel</button>
+                            <a class="btn btn-danger" th:href="@{/delete/{id}(id = ${blog.id})}" th:text="#{label.delete}">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<footer>David, ge waart uwen footer vergeten.</footer>
+
+
+</div>
 
 </body>
 </html>

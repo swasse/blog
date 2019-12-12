@@ -29,10 +29,12 @@ nav{
 .odd{
     background-color: #ffffff;
     padding: 10px;
+    text-align: left;
 }
 .even{
     background-color: #DDDDDD;
     padding: 10px;
+    text-align: right;
 }
 .odd .head{
     text-align: left;
@@ -41,11 +43,25 @@ nav{
     text-align: right;
 }
 
-footer{
-    height: 2%;
+/*modal cut and paste*/
+.modal-dialog {
+    margin-top: 20%;
+    color: #636363;
+    width: 400px;
+}
+.modal-dialog .modal-content{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.modal-dialog .modal-body {
+    color: rgba(0, 0, 0, 0.60);
+    border: none;
+}
+.modal-dialog .modal-footer {
+    border: none;
     text-align: center;
-    font-size: 8pt;
-    font-family: Verdana, sans-serif;
-    color: mediumvioletred;
-    background-color: orange;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
 }

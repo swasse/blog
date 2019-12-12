@@ -55,6 +55,4 @@ public class BlogPost {
     public void setDateCreated(LocalDateTime dateCreated) {
         this.dateCreated = dateCreated;
     }
-
-
 }
