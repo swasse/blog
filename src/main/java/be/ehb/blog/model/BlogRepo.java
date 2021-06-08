@@ -7,8 +7,11 @@ import java.util.List;
 
 public interface BlogRepo extends CrudRepository<BlogPost, Integer> {
 
-    @Query("SELECT b FROM BlogPost b ORDER BY b.dateCreated DESC ")
+    @Query("SELECT b FROM BlogPost b ORDER BY b.dateCreated DESC")
     List<BlogPost> findAllChronological();
+
+    List<BlogPost> findBlogPostByUserName(String username);
+
 
 
 }

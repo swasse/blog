@@ -12,15 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import javax.validation.Valid;
 
-/**
- * @author David Van steertegem
- * @version 0.0.1
-* */
 
 @Controller
 public class IndexController {
-    @Autowired
+
     private BlogRepo repo;
+
+    @Autowired
+    public IndexController(BlogRepo repo) {
+        this.repo = repo;
+    }
 
     @ModelAttribute("all")
     public Iterable<BlogPost> findAll(){
@@ -32,10 +33,7 @@ public class IndexController {
         return new BlogPost();
     }
 
-    /**
-     * method from <b>GET</b> http request to open index
-     * @return shows the index page
-     * */
+
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public String showIndex(ModelMap map){
         return "index";
